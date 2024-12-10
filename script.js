@@ -60,6 +60,9 @@ document.querySelector('.view-large-goal').addEventListener('click', function() 
     window.open(currentImage, '_blank');
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('home').classList.add('visible');
+  });
 
 
 document.addEventListener('DOMContentLoaded', function() {
