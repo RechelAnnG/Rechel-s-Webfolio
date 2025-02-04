@@ -3,214 +3,130 @@ const galleryControlsContainer = document.querySelector('.gallery-controls');
 const galleryControls = ['previous', 'next'];
 const galleryItems = document.querySelectorAll('.gallery-item');
 
-// Arrays for title, description, and date
-const titles = [
-    "NEXUS FINTECH SALES",
-    "JURRASIC POT PH",
-    "J2RD GROCERY SHOP MANAGEMENT SYSTEM",
-    "AIRLINE TICKETING SYSTEM | MERC Airlines",
-    "ORDERING SYSTEM | DOMI’S DONUTS & DRINKS",
-    "BUS TICKETING SYSTEM | MERC Bus"
+const projectData = [
+    {   title: 'Nexus Fintech Sales WebApp | POS System',
+        description: ' a secure and user-friendly website that streamlines operations, improves transactions, and promotes transparency for the University of Makati Employees Multi-Purpose Cooperative (UMEMPC).',
+        role: ' UI/UX Designer / Programmer',
+        tools: [
+            { image: 'lreact.png', name:'React'},
+            { image: 'lfirebase.png', name:'Firebase'}, 
+            { image:'lcss.png', name:'CSS'}, 
+            { image: 'lfigma.png', name:'Figma'}, 
+            { image: 'lgithub.png', name:'Github'}
+        ]
+     },
+    {   title: 'Jurassic Pot PH WebApp | E - Commerce', 
+        description: 'an e-commerce website offering unique dinosaur-themed plant pots, combining creativity and functionality to bring a prehistoric twist to gardening.', 
+        role: 'UI/UX Designer / Programmer',
+        tools: [
+             { image: 'lhtml.png', name:'HTML'}, 
+              { image: 'lphp.png', name:'PHP'},
+              { image: 'lcss.png', name:'React'}, 
+              { image: 'ljs.png', name:'JS'},
+              { image: 'lmysql.png', name:'MySQL'},
+        ] 
+    },
+    {   title: ' Grocery Shop Management System', 
+        description: 'a user-friendly platform that streamlines inventory, sales, and customer management, enhancing efficiency and ensuring smooth store operations for both staff and customers.', 
+        role: ' UI/UX Designer / Main Programmer',
+        tools: [ { image: 'lcsharp.png', name:'C#'}
+
+        ]
+     },
+    {   title: ' UMAK NEXUS', 
+        description: ' a secure and user-friendly website that streamlines operations, improves transactions, and promotes transparency for the University of Makati Employees Multi-Purpose Cooperative (UMEMPC).', 
+        role: 'UI/UX Designer / Programmer' ,
+        tools: [
+             { image: 'landroid.png', name:'Android'},
+             { image: 'ljava.png', name:'Java'}, 
+             { image: 'lfirebase.png', name:'Firebase'}
+        ]
+    },
+    {   title: 'REMIND ME', 
+        description: 'a mobile application that keeps your schedule on track with simple, customizable reminders for all your important tasks and events.', 
+        role: 'UI/UX Designer' ,
+        tools: [
+            { image: 'landroid.png', name:'Android'},
+            { image: 'ljava.png', name:'Java'}, 
+            { image: 'lsqlite.png', name:'SQLite'}
+        ]
+    },
 ];
 
-const descriptions = [
-    "a secure and user-friendly website that streamlines operations, improves transactions, and promotes transparency for the University of Makati Employees Multi-Purpose Cooperative (UMEMPC).",
-    "an e-commerce website offering unique dinosaur-themed plant pots, combining creativity and functionality to bring a prehistoric twist to gardening.",
-    "a user-friendly platform that streamlines inventory, sales, and customer management, enhancing efficiency and ensuring smooth store operations for both staff and customers.",
-    "Da streamlined platform designed to simplify flight bookings, manage customer details, and ensure a seamless ticketing experience.",
-    "a small project designed to simplify ordering donuts and drinks, featuring a basic menu and inventory management for quick and easy transactions.",
-    "a streamlined platform designed to simplify bus bookings, manage customer details, and ensure a seamless ticketing experience."
-];
-
-const dates = [
-    "OCTOBER 2023 - 2024",
-    "FEBRUARY 2023 - MAY 2023",
-    "DECEMBER 2022 - JANUARY 2023",
-    "NOVEMBER 2021 - JANUARY 2022",
-    "MARCH 2020 - APRIL 2020",
-    "SEPTEMBER 2019- NOVEMBER 2019"
-];
-
-
-
-document.querySelector('.next').addEventListener('click', function() {
-    changeSlide(1);
-});
-document.querySelector('.prev').addEventListener('click', function() {
-    changeSlide(-1);
-});
-
-function changeSlide(move) {
-    let slides = document.querySelectorAll('.slide');
-    let current = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
-    slides[current].classList.remove('active');
-    let newSlide = current + move;
-    if (newSlide >= slides.length) newSlide = 0;
-    if (newSlide < 0) newSlide = slides.length - 1;
-    slides[newSlide].classList.add('active');
-}
-
-document.querySelector('.view-large').addEventListener('click', function() {
-    let currentImage = document.querySelector('.slide.active img').src;
-    window.open(currentImage, '_blank');
-});
-
-document.querySelector('.view-large-goal').addEventListener('click', function() {
-    let currentImage = document.querySelector('.slider-container-goal .slide.active img').src;
-    window.open(currentImage, '_blank');
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('home').classList.add('visible');
-  });
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const elements = document.querySelectorAll('.fade-in');
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            } else {
-                // Optionally remove 'visible' class when out of view to allow re-animation
-                entry.target.classList.remove('visible');
-            }
-        });
-    }, {
-        threshold: 0.1 // Adjust this value based on when you want the animation to trigger
-    });
-
-    elements.forEach(element => {
-        observer.observe(element);
-    });
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    setupSlider('.slider-container', '.slide'); // Setup for Letter section
-    setupSlider('.slider-container-certificates', '.certificate-slide'); // Setup for Certificates section
-    
-    // Add the setup for the Goal Map & Network Chart section
-    setupSlider('.slider-container-goal', '.slide');
-});
-
-
-function setupSlider(containerSelector, slideSelector) {
-    const container = document.querySelector(containerSelector);
-    const slides = container.querySelectorAll(slideSelector);
-    let currentSlide = 0;
-
-    container.querySelector('.prev').addEventListener('click', function() {
-        currentSlide--;
-        if (currentSlide < 0) {
-            currentSlide = slides.length - 1;
-        }
-        updateSlides();
-    });
-
-    container.querySelector('.next').addEventListener('click', function() {
-        currentSlide++;
-        if (currentSlide >= slides.length) {
-            currentSlide = 0;
-        }
-        updateSlides();
-    });
-
-    function updateSlides() {
-        slides.forEach((slide, index) => {
-            slide.style.display = (index === currentSlide) ? 'block' : 'none';
-        });
-    }
-
-    updateSlides(); // Initialize to show the first slide
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
-            } else {
-                entry.target.style.opacity = 0;
-                entry.target.style.transform = 'translateY(20px)';
-            }
-        });
-    }, {
-        threshold: 0.5 // Adjust this value based on when you want the animation to trigger
-    });
-
-    document.querySelectorAll('.award-image').forEach(img => {
-        observer.observe(img);
-    });
-});
-
-
-
-class Carousel { 
-    constructor(container, items, controls, titles, descriptions, dates) {
+class Carousel {
+    constructor(container, items, controls) {
         this.carouselContainer = container;
         this.carouselControls = controls;
-        this.carouselItems = [...items];
-        this.titles = titles;
-        this.descriptions = descriptions;
-        this.dates = dates;
-        this.descriptionElement = document.getElementById('image-description');
-        this.initializeGallery();
-    }
+        this.carouselArray = [...items];
 
-    initializeGallery() {
-        this.updateGallery();
-        this.updateDescription();
+        this.updateDetails(); 
     }
 
     updateGallery() {
-        this.carouselItems.forEach((el, index) => {
-            el.classList.remove('gallery-item-1', 'gallery-item-2', 'gallery-item-3', 'gallery-item-4', 'gallery-item-5', 'gallery-item-6');
-            el.classList.add(`gallery-item-${index+1}`);
+        this.carouselArray.forEach((el, index) => {
+            el.classList.remove('gallery-item-1', 'gallery-item-2', 'gallery-item-3', 'gallery-item-4', 'gallery-item-5');
+        });
+    
+        this.carouselArray.slice(0, 5).forEach((el, i) => {
+            el.classList.add(`gallery-item-${i+1}`);
         });
     }
 
-    updateDescription() {
-        // Find the currently centered item
-        const centeredItem = this.carouselItems.find(el => el.classList.contains('gallery-item-1'));
-        if (!centeredItem) return;
+    updateDetails() {
+        // Assuming the second item in the array (middle of five) is always the centered item
+        const activeItem = this.carouselArray[0];
+        const projectDetails = projectData[parseInt(activeItem.dataset.index) - 1]; // Assuming your data-index attributes and projectData array are aligned
+        
+        document.getElementById('project-title').textContent = projectDetails.title;
+        document.getElementById('project-description').textContent = projectDetails.description;
+        document.getElementById('project-role').textContent = projectDetails.role;
 
-        // Get the data-index from the centered item
-        const dataIndex = parseInt(centeredItem.getAttribute('data-index'), 10);
-        const title = this.titles[dataIndex - 1];
-        const description = this.descriptions[dataIndex - 1];
-        const date = this.dates[dataIndex - 1];
+        const toolsContainer = document.querySelector('.proj-tools');
+        toolsContainer.innerHTML = ''; // Clear existing tools
 
-        // Update the #image-description content
-        // Using innerHTML so we can format nicely
-        this.descriptionElement.innerHTML = `
-            <strong>${title}</strong><br>
-            ${description}<br>
-            <em>${date}</em>
-        `;
+        projectDetails.tools.forEach(tool => {
+            const toolContainer = document.createElement('div');
+            toolContainer.classList.add('tool-item'); // A class for styling the container
+    
+            const img = document.createElement('img');
+            img.src = tool.image; // Use the 'image' property from the tool object
+            img.alt = tool.name; // Use the 'name' property for alt text
+            img.style.width = '30px'; // Set image size
+            img.style.height = '30px';
+    
+            const text = document.createElement('span');
+            text.textContent = tool.name; // Use the 'name' property for the label
+            text.style.display = 'block'; // Ensure the text appears below the image
+            text.style.textAlign = 'center'; // Center align the text
+    
+            toolContainer.appendChild(img);
+            toolContainer.appendChild(text);
+            toolsContainer.appendChild(toolContainer);
+        });
     }
 
     setCurrentState(direction) {
         if (direction.className.includes('previous')) {
-            this.carouselItems.push(this.carouselItems.shift());
+            this.carouselArray.unshift(this.carouselArray.pop());
         } else {
-            this.carouselItems.unshift(this.carouselItems.pop());
+            this.carouselArray.push(this.carouselArray.shift());
         }
         this.updateGallery();
-        this.updateDescription();
+        this.updateDetails();
     }
 
     setControls() {
         this.carouselControls.forEach(control => {
             const button = document.createElement('button');
             button.className = `gallery-controls-${control}`;
-            button.innerText = control;
+            const image = document.createElement('img');
+            image.src = control === 'previous' ? 'left-arrow.png' : 'right-arrow.png'; // Adjust path if needed
+            image.alt = control === 'previous' ? 'Previous' : 'Next';
+            button.appendChild(image);
             galleryControlsContainer.appendChild(button);
         });
     }
-
+    
     useControls() {
         const triggers = [...galleryControlsContainer.childNodes];
         triggers.forEach(control => {
@@ -220,8 +136,13 @@ class Carousel {
             });
         });
     }
+    
+    
 }
 
-const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls, titles, descriptions, dates);
-exampleCarousel.setControls();
-exampleCarousel.useControls();
+const exampleCarousel = new Carousel (galleryContainer, galleryItems, galleryControls);
+
+ exampleCarousel.setControls();
+ exampleCarousel.useControls();
+
+

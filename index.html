@@ -3,210 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    
-
-    <title>Rechel's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">  
+    <title>Rechel Ann De Guzman</title>
 </head>
 <body>
-    <nav>
-        <div class="nav-logo">Rechel</div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#Letter">Application Letter & Resume</a>
-            <a href="#certificates">Certificates</a>
-            <a href="#awards">Awards</a>
-            <a href="#projects">Academic Projects</a>
-            <a href="#drive">Video Resume</a>
-            <a href="#socials">LinkedIn</a>
-            <a href="#Goal">Job Goal Map & Network Chart</a>
-        </div>
-    </nav>
+        <div class="container">
+            <div class="left">
+            
+                <div class="left-main-content">
+                    <div class="left-inner-left-content">
+                        
+                        <div class="left-inner-left-main-container">
+                            <button class="back-btn" style="display:none;" id="back-btn">
+                            <div class="btn-image"> 
+                                
+                            </div>
+                            <div class="back">BACK</div>
+                            
+                        </button> 
+                            <div class="profile">
+                                <img src="profile.jpg" alt="Profile Image">
+                            </div>
+                            
+                            <div class="socials">
+                                <a href="https://www.facebook.com/Recheeeeeeng30" target="_blank">
+                                    <img src="facebook.png" alt="Facebook">
+                                </a>
+                                <a href="https://www.linkedin.com/in/rechelanndeguzman/" target="_blank">
+                                    <img src="linkedin.png" alt="LinkedIn">
+                                </a>
+                                <a href="https://www.instagram.com/chellyace30/" target="_blank">
+                                    <img src="instagram.png" alt="Instagram">
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="left-inner-right-content">
+                        <div class="left-inner-right-main-container">
+                            <div class="introduction">
+                                <div class="intro">
+                                    <div class="greetings">HI, I’M </div>
+                                    <div class="name">RECHEL ANN DE GUZMAN</div>
+                                </div>
+                                <div class="role">
+                                    <div class="role-1">WEB</div>
+                                    <div class="bridge">&</div>
+                                    <div class="role-2">SOFTWARE DEVELOPER</div>
+                                </div>
+                               
+                                <div class="role-collapsed" style="display: none;">
+                                    <div class="role-collapsed-1">21 YEARS OLD | WEB & SOFTWARE DEVELOPER</div>
+                                </div>
+                                <div class="age">21 YEARS OLD</div>
+                            </div>
+                            
+                            <div class="description">
+                                A 4TH-YEAR STUDENT AT THE UNIVERSITY OF MAKATI, MAJORING IN APPLICATION DEVELOPMENT. I AM PASSIONATE ABOUT
+                                APPLYING PRACTICAL AND TECHNICAL SKILLS TO DEVELOP SOFTWARE AND WEBSITE DESIGNS THAT ARE USER FRIENDLY AND VISUALLY APPEALING.
+                            </div>
+                            <!-- In your HTML, ensure your button has a unique identifier or class -->
+                            <button class="view-btn" id="collapse-btn">
+                                <div class="view-projects">VIEW PROJECTS</div>
+                                <div class="btn-image"> 
+                                    <img src="arrow.png" alt="arrow">
+                                </div>
+                            </button>  
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <section id="home" class="fade-in">
-        <div class="home-container content-item">
-            <div class="home-image content-item">
-                <!-- Place your image here -->
-                <img src="profile-pic.png" alt="Rechel Ann De Guzman">
-            </div>
-            <div class="home-content content-item">
-                <h1>Welcome! </h1>
-                <p>I am Rechel Ann De Guzman, a recent Computer Science graduate from the University of Makati, with a focus on website design. I enjoy blending creativity with technology to build easy-to-use and visually appealing websites. Currently seeking a role where I can apply my skills and grow as part of a team dedicated to creating impactful digital experiences.</p>
-                <button onclick="location.href='#Letter'">View Portfolio</button>
-            </div>
-        </div>
-    </section>
-    <section id="Letter" class="fade-in">
-        <h1 class="content-item">Application Letter & Resume</h1>
-        <div class="slider-container content-item">
-            <div class="slide active">
-                <img src="apletter.png" alt="Application Letter">
-            </div>
-            <div class="slide">
-                <img src="Resume.png" alt="Resume">
-            </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-        </div>
-        <button class="view-large content-item">View in Fullscreen</button>
-    </section>
-    
-    
-    <section id="certificates" class="fade-in">
-        <h1  class="content-item">Certificates</h1>
-        <div class="slider-container-certificates content-item">
-            <button class="prev">&#10094;</button>
-            <div class="certificate-slide active">
-                <img src="certificate-1.jpg" alt="MOOC Certificate">
-                <h2>MOOC</h2>
-                <p>English for Career Development Certificate</p>
-            </div>
-            <div class="certificate-slide">
-                <img src="certificate-2.jpg" alt="META FRONTEND DEVELOPMENT | HTML and CSS Depth Certificate">
-                <h2>META FRONTEND DEVELOPMENT</h2>
-                <p>HTML and CSS Depth Certificate</p>
-            </div>
-            <div class="certificate-slide">
-                <img src="certificate-3.png" alt="CISCO | JavaScript Essentials 1 Course">
-                <h2>CISCO</h2>
-                <p>JavaScript Essentials 1 Course</p>
-            </div>
-            <div class="certificate-slide">
-                <img src="certificate-4.png" alt="HR TRAINING AND DEVELOPMENT | Webinar on Human Resource Training and Development">
-                <h2>HR TRAINING AND DEVELOPMENT</h2>
-                <p>Webinar on Human Resource Training and Development: Strategies for Empowering Excellence of the Human Capital in a High Performance Workplace</p>
-            </div>
-            <div class="certificate-slide">
-                <img src="certificate-5.png" alt="HR TRAINING AND DEVELOPMENT | Webinar on Learning Human Resource Management">
-                <h2>HR TRAINING AND DEVELOPMENT</h2>
-                <p>Webinar on Learning Human Resource Management: Enhancing Workforce Performance, Engagement, and Organizational Success</p>
-            </div>
-            <div class="certificate-slide">
-                <img src="certificate-6.png" alt="HR TRAINING AND DEVELOPMENT | Webinar on Human Resource Compensation and Benefits">
-                <h2>HR TRAINING AND DEVELOPMENT</h2>
-                <p>Webinar on Human Resource Compensation and Benefits: Enhancing Employee Satisfaction and Driving Organizational Success Through Comprehensive Compensation and Benefits Programs</p>
-            </div>
-            <div class="certificate-slide">
-                <img src="certificate-7.jpg" alt="GOLDEN ARCHES DEVELOPMENT CORPORATION | MCDONALDS Building a Safe, Respectful, and Inclusive Workplace (Crew)">
-                <h2>GOLDEN ARCHES DEVELOPMENT CORPORATION | MCDONALD'S</h2>
-                <p>Building a Safe, Respectful, and Inclusive Workplace (Crew)</p>
-            </div>
-            <div class="certificate-slide">
-                <img src="certificate-8.png" alt="DEPARTMENT OF INFORMATION AND COMMUNICATIONS TECHNOLOGY Introduction to Data Privacy">
-                <h2>DEPARTMENT OF INFORMATION AND COMMUNICATIONS TECHNOLOGY</h2>
-                <p>Introduction to Data Privacy</p>
-            </div>
-            <div class="certificate-slide">
-                <img src="certificate-9.jpg" alt="5TH PHILIPPINE SKILLING SUMMIT 2022 | Computational Thinking and Its Importance in Education">
-                <h2>5TH PHILIPPINE SKILLING SUMMIT 2022</h2>
-                <p>Computational Thinking and Its Importance in Education</p>
-            </div>
-            <button class="next">&#10095;</button>
-        </div>
-    </section>
-    
-    
-    <section id="awards" class="fade-effect">
-        <h1>Awards</h1>
-        <div class="awards-container">
-            <img src="award-1.png" alt="Award 1" class="award-image">
-            <img src="award-2.png" alt="Award 2" class="award-image">
-            <img src="award-3.png" alt="Award 3" class="award-image">
-            <img src="award-4.png" alt="Award 4" class="award-image">
-            <img src="award-5.png" alt="Award 5" class="award-image">
-            <img src="award-6.png" alt="Award 6" class="award-image">
-            <img src="award-7.png" alt="Award 7" class="award-image">
-            <img src="award-8.png" alt="Award 8" class="award-image">
-        </div>
-    </section>
-    
-    <section id="projects" class="fade-in">
-        <h1 class="content-item">Academic Projects</h1>
-        <div class="gallery-description content-item">
-            <p id="image-description">Description of the selected project will appear here.</p>
-        </div>
-        <div class="gallery content-item">
-            <div class="gallery-container">
-                <img class="gallery-item gallery-item-1" src="proj-1.png" data-index="1" alt="Project 1">
-                <img class="gallery-item gallery-item-2" src="proj-6.png" data-index="6" alt="Project 6">
-                <img class="gallery-item gallery-item-3" src="proj-5.jpg" data-index="5" alt="Project 5">
-                <img class="gallery-item gallery-item-4" src="proj-4.png" data-index="4" alt="Project 4">
-                <img class="gallery-item gallery-item-5" src="proj-3.png" data-index="3" alt="Project 3">
-                <img class="gallery-item gallery-item-6" src="proj-2.png" data-index="2" alt="Project 2">
-            </div>
-            <div class="gallery-controls content-item">
-                <!-- The carousel JavaScript will dynamically add buttons here -->
-            </div>
-        </div>
-    </section>
-    
-    
-    
-    <section id="drive"  class="fade-in">
-        <h1 class="content-item" >Revised Video Resume</h1>
-        <div class="video-container content-item">
-            <video controls>
-                <source src="vid-res.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
-    <section id="socials" class="fade-in">
-        <h1 class="content-item">LinkedIn Account</h1>
-        <div class="content-item">
-            <a href="https://www.linkedin.com/in/rechelanndeguzman/" target="_blank">
-                <img src="linkedin.png" alt="LinkedIn Profile" class="linkedin-image">
-            </a>
-        </div>
-    </section>
-    
-    
-    <section id="Goal" class="fade-in">
-        <h1 class="content-item">Job Goal Map & Network Chart</h1>
-        <div class="slider-container-goal content-item">
-            <div class="slide active">
-                <img src="goalmap.png" alt="Goal Map">
-            </div>
-            <div class="slide">
-                <img src="netchart.png" alt="Network Chart">
-            </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-        </div>
-        <button class="view-large-goal content-item">View in Fullscreen</button>
-    </section>
+            <div class="right">
+                <div class="right-top" style="display: none;"> <!-- Initially hidden -->
+                    <!-- Main content here -->
+                    <div class="pop-up-text">ACADEMIC PROJECTS</div>
+                    
+                    <!-- Container wrapping the two project columns -->
+                    <div class="academic-projects-container">
+                    <!-- First Column: Pastel Yellow -->
+                    <div class="project pastel-yellow">
+                        <div class="gallery">
+                            <div class="gallery-container">
+                                <img class="gallery-item gallery-item-1" src="proj-1.png" data-index="1">
+                                <img class="gallery-item gallery-item-2" src="proj-2.png" data-index="2">
+                                <img class="gallery-item gallery-item-3" src="proj-3.png" data-index="3">
+                                <img class="gallery-item gallery-item-4" src="proj-4.png" data-index="4">
+                                <img class="gallery-item gallery-item-5" src="proj-5.png" data-index="5">
+                            </div>
 
-    <section id="references" class="fade-in">
-        <h1 class="content-item">References</h1>
-        <div class="references-container content-item">
-            <div class="reference-card">
-                <p><strong>Name:</strong> John Guzmana</p>
-                <p><strong>Position:</strong> Software Developer</p>
-                <p><strong>Contact:</strong> +63 928 983 6179
-                </p>
-            </div>
-            <div class="reference-card">
-                <p><strong>Name:</strong> Grocerie Paringit</p>
-                <p><strong>Position:</strong> Business Owner</p>
-                <p><strong>Contact:</strong> +63 928 240 3016</p>
-            </div>
-            <div class="reference-card">
-                <p><strong>Name:</strong> Maylody Perez</p>
-                <p><strong>Position:</strong>Office Secretary</p>
-                <p><strong>Contact:</strong> +63 915 613 5482</p>
+                            <div class="gallery-controls">
+                                <!-- The carousel JavaScript will dynamically add buttons here -->
+                            </div>
+                        </div>  
+                    </div>
+                    
+                    <!-- Second Column: Pastel Sage Green -->
+                        <div class="project pastel-sage-green">
+                            <p></p>
+                            
+                            <!-- Container for the two rows -->
+                            <div class="project-rows">
+                            <!-- Row 1: Pastel Purple -->
+                            <div class="project-row pastel-purple">
+                                <div class="column proj-header" style="text-transform: uppercase;">
+                                    <div id="project-title" ></div>
+                                </div>
+                                <div class="column proj-role" style="text-transform: uppercase;">
+                                    <div id="project-role"> </div>
+                                </div>
+                                <div class="column proj-description" style="text-transform: uppercase;">
+                                    <div id="project-description"></div>
+                                </div>
+                                
+                            </div>
+                            
+                            
+                            <!-- Row 2: Pastel Orange -->
+                            <div class="project-row pastel-orange">
+                                <div class="proj-tools" id="proj-tools" style="text-transform: uppercase;">
+                                    
+                                </div>
+                            </div>
+                            
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+                
+                <div class="right-bottom">
+                    <div class="right-header">
+                        <h2 class="Tech-Skills">TECHNICAL SKILLS</h2>
+                        <img src="down-arrow.png" style="display: none;" alt="Down Arrow" class="down-arrow" id="toggle-arrow">
+                    </div>
+                    <div class="right-main-content">
+                        <div class="row web">
+                            <div class="web-header">WEB DEVELOPMENT</div>
+                            <div class="web-main-content">
+                                <div class="skill">
+                                    <img src="html.png" alt="HTML">
+                                    <span>HTML</span>
+                                </div>
+                                <div class="skill">
+                                    <img src="css.png" alt="CSS">
+                                    <span>CSS</span>
+                                </div>
+                                <div class="skill">
+                                    <img src="javascript.png" alt="JavaScript">
+                                    <span>JAVASCRIPT</span>
+                                </div>
+                                <div class="skill">
+                                    <img src="php.png" alt="PHP">
+                                    <span>PHP</span>
+                                </div>
+                                <div class="skill">
+                                    <img src="react.png" alt="React">
+                                    <span>REACT</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="row software">
+                            <div class="software-header">SOFTWARE DEVELOPEMT </div>
+                            <div class="software-main-content">
+                                <div class="skill">
+                                    <img src="c++.png" alt="c++">
+                                    <span>C++</span>
+                                </div>
+                                <div class="skill">
+                                    <img src="java.png" alt="Java">
+                                    <span>JAVA</span>
+                                </div>
+                                <div class="skill">
+                                    <img src="csharp.png" alt="Csharp">
+                                    <span>C#</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row design">
+                            <div class="design-header">DESIGN TOOLS</div>
+                            <div class="design-main-content">
+                                <div class="skill">
+                                    <img src="figma.png" alt="figma">
+                                    <span>FIGMA</span>
+                                </div>
+                                <div class="skill">
+                                    <img src="gimp.png" alt="gimp">
+                                    <span>GIMP</span>
+                                </div>
+                                <div class="skill">
+                                    <img src="canva.png" alt="canva">
+                                    <span>CANVA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div> 
             </div>
         </div>
-    </section>
-    
-    
-
-    <footer>
-        <p>© 2024 Rechel Ann De Guzman. All rights reserved.</p>
-    </footer>
-
     <script src="script.js"></script>
 </body>
+
+    <script>
+        document.getElementById('collapse-btn').addEventListener('click', function() {
+        // Toggle the collapsed class on the .left container
+        document.querySelector('.left').classList.toggle('collapsed');
+        // Toggle the expand class on the .right container
+        document.querySelector('.right').classList.toggle('expand');
+
+
+        
+
+        });
+
+        document.getElementById('back-btn').addEventListener('click', function() {
+        // Toggle the collapsed class on the .left container
+        document.querySelector('.left').classList.toggle('collapsed');
+        // Toggle the expand class on the .right container
+        document.querySelector('.right').classList.toggle('expand');
+
+
+        
+
+        });
+     
+
+        const toggleArrow = document.getElementById('toggle-arrow');
+  
+  toggleArrow.addEventListener('click', function() {
+      // Toggle visibility of right-main-content as needed
+      document.querySelector('.right').classList.toggle('hide-main-content');
+
+      // Toggle the rotated class to rotate the arrow
+      toggleArrow.classList.toggle('rotated');
+  });
+  </script>
+  
+
 </html>
