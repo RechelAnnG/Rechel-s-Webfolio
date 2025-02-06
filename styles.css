@@ -150,7 +150,7 @@ body {
 
 .left.collapsed .profile {
     /*background-color: #2e5542;  Darker green background */
-    padding: 20px;
+    padding: 0;
 }
 
 .profile img {
@@ -162,8 +162,8 @@ body {
 }
 
 .left.collapsed .profile img {
-    width: 200px; /* Set the width of the image */
-    height: 250px; /* Set the height of the image */
+    width: 150px; /* Set the width of the image */
+    height: 200px; /* Set the height of the image */
     object-fit: cover; /* Ensures the image covers the area without distorting */
     border-radius: 50%; /* Creates an elliptical shape */
     box-shadow: 0 0 10px 2px #d50e38; /* Adds a yellow shadow effect */
@@ -183,6 +183,20 @@ body {
      padding:0;
      display: none;
  }
+
+.left.collapsed .socials-collapsed{
+      /* background-color: #2e5542;  Darker green background */
+      display: flex !important;
+          gap: 10px;
+          cursor: pointer;
+          padding: 20px;
+  }
+
+  .left.collapsed .socials-collapsed img {
+    width: 40px; /* Sets a fixed width for each logo */
+    height: 40px; /* Sets a fixed height for each logo */
+    object-fit: contain; /* Ensures the logos are contained within their box without stretching */
+}
 
 .socials img {
     width: 50px; /* Sets a fixed width for each logo */
@@ -217,7 +231,6 @@ body {
 
 .left.collapsed .left-inner-right-main-container {
       width: auto; /* Adjusts the width to fit content */
-      padding: 0;
       padding-left: 20px;
       padding-right: 20px;
   }
@@ -235,9 +248,10 @@ body {
 
  
 .introduction {
-    /* padding: 20px; Existing padding */
-   /*  background-color: #2e5542; Existing background color */
-    
+    display: flex
+    ;
+        flex-direction: column;
+        gap: 20px;
 }
 
 .left.collapsed .introduction {
@@ -245,8 +259,8 @@ body {
    /*  background-color: #2e5542; Existing background color */
    display: flex;
        flex-direction: column;
-       gap: 10px;
        margin-bottom: 10px;
+       gap:0;
 }
 
 
@@ -271,6 +285,7 @@ body {
  .name{
     font-size: xx-large;
     color: #d50e38;
+    text-shadow: 0 3px 12px #d50e38;
     animation: slideDownFadeIn 1.5s ease-out forwards; /* Apply the animation */
  }
 
@@ -328,6 +343,7 @@ body {
     font-size: x-large;
     color: #d50e38;
     animation: slideDownFadeIn 1.5s ease-out forwards; /* Apply the animation */
+    text-shadow: 0 3px 12px #d50e38;
  }
 
  .bridge{
@@ -340,6 +356,7 @@ body {
     font-size: x-large;
     color: #d50e38;
     animation: slideDownFadeIn 1.5s ease-out forwards; /* Apply the animation */
+    text-shadow: 0 3px 12px #d50e38;
  }
 
  .left.collapsed{
@@ -358,6 +375,7 @@ body {
     font-size:medium;
     color: #131661;
     animation: slideDownFadeIn 1.5s ease-out forwards; /* Apply the animation */
+    margin-bottom: 10px;
  }
 
  .age{
@@ -383,15 +401,48 @@ body {
     border-radius: 20px; /* Rounded corners */
     text-align: justify; /* Text alignment */
     animation: slideUpFadeIn 1.5s ease-out forwards; /* Animation settings */
-    
+    margin-top: 20px;
+}
+
+
+
+.left.collapsed .soft-skills {
+
+    display: flex !important;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+    background-color: #fbfbfe;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top:10px;
+}
+
+.left.collapsed .column-skills {
+    flex: 1; /* Each column takes equal width */
+    border-radius: 20px;
+}
+
+.left.collapsed .soft-skills-header {
+   /* background-color: #fdfd96;  Pastel yellow */
+    color: #d50e38;
+    font-size: medium;
+    font-weight: bold;
+
+}
+
+.left.collapsed .soft-skills-content {
+  /*  background-color: #007BFF;  Example blue background color */
+  color: #d50e38;
+  font-size: small;
+  display: flex
+;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .left.collapsed .description {
-    font-size:x-small;
-width: auto;
-background-color: transparent;
-color:#fbfbfe;
-padding: 0;
+  display: none;
 }
 
 .view-btn {
@@ -403,12 +454,12 @@ padding: 0;
     font-weight: bold; /* Bold text */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s; /* Smooth transition for hover effect */
-    margin-top: 10px; /* Space between the description and the button */
+    margin-top: 20px; /* Space between the description and the button */
     outline: none; /* Remove outline to keep the design clean */
     display: flex;
     justify-content: left;
     align-items: center;
-
+    box-shadow: 0 3px 12px #131661;
     position: relative; /* Ensures the positioning context is set */
     overflow: hidden; /* Prevents overflow of child elements */
 }
@@ -438,6 +489,7 @@ padding: 0;
 
 .left.collapsed .back-btn{
     display: flex !important;
+    margin-top: 20px;
 }
 
 .left.collapsed .view-btn{
@@ -447,7 +499,7 @@ padding: 0;
 .back-btn {
     padding: 10px 20px; /* Adequate padding for clickable area */
     background-color: #fbfbfe; /* Navy blue background to stand out */
-    color: #131661; /* White text */
+    color: #d50e38; /* White text */
     border: none; /* No border */
     border-radius: 20px; /* Rounded corners */
     font-weight: bold; /* Bold text */
@@ -543,11 +595,12 @@ padding: 0;
     color: #d50e38;
     font-weight: bold;
     font-size: xx-large;
+    text-shadow: 0 3px 5px #d50e38;
 }
 
 .proj-description {
    color: #131661;
-   font-weight: bold;
+   font-weight: normal;
    font-size: medium;
 }
 
@@ -558,6 +611,7 @@ padding: 0;
 }
   
   /* Pastel orange background */
+  
   .pastel-orange {
     flex: 1;
     background-color: #131661;  /* You can adjust this color as needed */
@@ -566,6 +620,20 @@ padding: 0;
     align-items: center;
     color: #fbfbfe;
   }
+
+.tools-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+}
+
+.tools-header{
+    flex: 1;
+    padding-top: 10px;
+    font-size: large;
+    font-weight: bold;
+}
 
   .tool-item {
     display: flex;
@@ -577,10 +645,12 @@ padding: 0;
 
   .proj-tools {
     display: flex;
-    gap: 30px;         
+    gap: 45px;         
     flex-wrap: wrap;      
     padding: 10px;      
     justify-content: center;
+    flex: 2;
+    font-size: small;
 }
 
   
@@ -672,7 +742,7 @@ padding: 0;
 }
 
 .right.expand{
-    flex: 3;
+    flex: 4;
     background-color: #fbfbfe;
     padding: 0;
 }
@@ -805,6 +875,16 @@ padding: 0;
     
 }
 
+.right.expand .web-header, .right.expand .software-header, .right.expand .design-header {
+    animation: none;
+    animation: slideUpFadeIn 1.5s ease-out forwards;
+}
+
+.right.expand .web-main-content, .right.expand .software-main-content, .right.expand .design-main-content {
+    animation: none;
+    animation: slideUpFadeIn 1.5s ease-out forwards;
+}
+
 .web-header, .software-header, .design-header {
     /*background-color: #808080;  Gray background */
     color: #131661; /* White text for contrast */
@@ -817,7 +897,7 @@ padding: 0;
 .web-main-content, .software-main-content, .design-main-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 5px;
     align-items: center;
     justify-items: center;
     padding: 10px;
@@ -832,9 +912,8 @@ padding: 0;
 }
 
 .skill img {
-    width: 32px; /* Adjust size as necessary */
+    width: 45px; /* Adjust size as necessary */
     height: auto; /* Maintain aspect ratio */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .skill span {
@@ -891,7 +970,7 @@ padding: 0;
 }
   
 .gallery-item-1 {
-    box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 3px 15px #131661;
     height: 300px;
     opacity: 1;
     left: 50%;
@@ -960,3 +1039,11 @@ padding: 0;
 .gallery-nav li.gallery-item-selected {
     background: #555;
 }
+
+
+
+
+
+
+
+

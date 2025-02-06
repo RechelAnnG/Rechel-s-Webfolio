@@ -38,6 +38,9 @@
                             </div>
                             
                         </div>
+
+
+
                     </div>
                     <div class="left-inner-right-content">
                         <div class="left-inner-right-main-container">
@@ -56,12 +59,36 @@
                                     <div class="role-collapsed-1">21 YEARS OLD | WEB & SOFTWARE DEVELOPER</div>
                                 </div>
                                 <div class="age">21 YEARS OLD</div>
+
+                                <div class="soft-skills" style="display: none;">
+                                    <div class="column-skills soft-skills-header"> <!-- Class for styling yellow background -->
+                                        SOFT SKILLS
+                                    </div>
+                                    <div class="column-skills soft-skills-content">
+                                        
+                                            <div class="skills">• Able to strive in a fast-paced environment</div>
+                                            <div class="skills">• Confidence to engage in friendly, meaningful conversations with ease</div>
+                                            <div class="skills">• Works well with others and independently</div>
+                                            <div class="skills">• Ability to take and follow direction</div>
+                                            <div class="skills">• Staying driven and motivated</div>
+                                        
+                                    </div>
+                                </div>
+                                
+                               
+
                             </div>
                             
                             <div class="description">
                                 A 4TH-YEAR STUDENT AT THE UNIVERSITY OF MAKATI, MAJORING IN APPLICATION DEVELOPMENT. I AM PASSIONATE ABOUT
                                 APPLYING PRACTICAL AND TECHNICAL SKILLS TO DEVELOP SOFTWARE AND WEBSITE DESIGNS THAT ARE USER FRIENDLY AND VISUALLY APPEALING.
                             </div>
+
+                            
+                           
+
+                            
+                            
                             <!-- In your HTML, ensure your button has a unique identifier or class -->
                             <button class="view-btn" id="collapse-btn">
                                 <div class="view-projects">VIEW PROJECTS</div>
@@ -73,6 +100,18 @@
                            
                         </div>
                     </div>
+                </div>
+
+                <div class="socials-collapsed" style="display: none;">
+                    <a href="https://www.facebook.com/Recheeeeeeng30" target="_blank">
+                        <img src="lfacebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.linkedin.com/in/rechelanndeguzman/" target="_blank">
+                        <img src="llinkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/chellyace30/" target="_blank">
+                        <img src="linstagram.png" alt="Instagram">
+                    </a>
                 </div>
             </div>
 
@@ -107,26 +146,30 @@
                             <!-- Container for the two rows -->
                             <div class="project-rows">
                             <!-- Row 1: Pastel Purple -->
-                            <div class="project-row pastel-purple">
-                                <div class="column proj-header" style="text-transform: uppercase;">
-                                    <div id="project-title" ></div>
-                                </div>
-                                <div class="column proj-role" style="text-transform: uppercase;">
-                                    <div id="project-role"> </div>
-                                </div>
-                                <div class="column proj-description" style="text-transform: uppercase;">
-                                    <div id="project-description"></div>
-                                </div>
-                                
-                            </div>
-                            
-                            
-                            <!-- Row 2: Pastel Orange -->
-                            <div class="project-row pastel-orange">
-                                <div class="proj-tools" id="proj-tools" style="text-transform: uppercase;">
+                                <div class="project-row pastel-purple">
+                                    <div class="column proj-header" style="text-transform: uppercase;">
+                                        <div id="project-title" ></div>
+                                    </div>
+                                    <div class="column proj-role" style="text-transform: uppercase;">
+                                        <div id="project-role"> </div>
+                                    </div>
+                                    <div class="column proj-description" style="text-transform: uppercase;">
+                                        <div id="project-description"></div>
+                                    </div>
                                     
                                 </div>
-                            </div>
+                            
+                            
+                            
+                             
+                                <div class="project-row pastel-orange">
+                                    <div class="tools-container">
+                                        <div class="tools-header">USED TOOLS</div>
+                                        <div class="proj-tools" id="proj-tools" style="text-transform: uppercase;">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
                             
                             </div>
                         </div>
@@ -234,13 +277,13 @@
 
         const toggleArrow = document.getElementById('toggle-arrow');
   
-  toggleArrow.addEventListener('click', function() {
-      // Toggle visibility of right-main-content as needed
-      document.querySelector('.right').classList.toggle('hide-main-content');
+        toggleArrow.addEventListener('click', function() {
+            // Toggle visibility of right-main-content as needed
+            document.querySelector('.right').classList.toggle('hide-main-content');
 
-      // Toggle the rotated class to rotate the arrow
-      toggleArrow.classList.toggle('rotated');
-  });
+            // Toggle the rotated class to rotate the arrow
+            toggleArrow.classList.toggle('rotated');
+        });
   </script>
   
 
