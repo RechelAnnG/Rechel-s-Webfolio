@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/png">
     <title>Rechel Ann De Guzman</title>
 </head>
 <body>
@@ -36,6 +37,15 @@
                         <img src="instagram.png" alt="Instagram">
                     </a>
                 </div>
+
+                <button class="view-mobile-btn" style="display: none;" id="mobile-btn">
+                    <div class="view-projects">VIEW PROJECTS</div>
+                    <div class="btn-image"> 
+                        <img src="arrow.png" alt="arrow">
+                    </div>
+                </button>  
+
+                
 
             </div>
             <div class="ml-right">
@@ -298,6 +308,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var body = document.body;
+
+    // Set initial inline style if none exists
+    if (!body.style.height) {
+        body.style.height = '100vh'; // Assumes the CSS starts with 100vh
+    }
+
+    document.getElementById('mobile-btn').addEventListener('click', function() {
+        // Toggle the height style based on the current inline style
+        if (body.style.height === '100vh') {
+            body.style.height = 'auto';
+        } else {
+            body.style.height = '100vh';
+        }
+
+        // Toggle the collapsed class on the .main-left container
+        document.querySelector('.main-left').classList.toggle('collapsed');
+        // Optionally, toggle the expand class on the .main-right container
+        document.querySelector('.main-right').classList.toggle('expand');
+    });
+
+
+    
+});
+
+
 
 
 
